@@ -121,8 +121,8 @@ def round_down_number(number)
 end
 
 def format_date_nicely(time)
-	date = time.to_s.gsub!(/-/, " ")
-	array = date[0..9].split(" ")
+	date = time.to_s
+	array = date[0..9].split("-")
 	array.reverse!.join("/")
 end
 
