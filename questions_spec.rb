@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative './questions'
+require_relative './answers'
 
 RSpec.configure do |config|
   config.color = true
@@ -8,12 +8,12 @@ end
 
 describe 'the Friday test :)' do
   
-  specify 'select_elements_starting_with_a' do
+  fit 'select_elements_starting_with_a' do
     n = select_elements_starting_with_a ['bananas', 'apples', 'pears', 'avocados']
     expect(n).to eq ['apples', 'avocados']
   end
 
-  specify 'select_elements_starting_with_vowel' do
+  fit 'select_elements_starting_with_vowel' do
     n = select_elements_starting_with_vowel ['john', 'david', 'omar', 'fred', 'idris', 'angela']
     expect(n).to eq ['omar', 'idris', 'angela']
   end
