@@ -84,3 +84,8 @@ end
 def get_elements_until_greater_than_five(array)
 	array.take_while { |e| e <= 5 }
 end
+
+def convert_array_to_a_hash(array)
+	hash = Hash[*array]
+	hash
+end
