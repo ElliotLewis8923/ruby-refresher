@@ -9,3 +9,7 @@ end
 def remove_nils_from_array(array)
 	array.delete_if { |e| e.nil? }
 end
+
+def remove_nils_and_false_from_array(array)
+	array.delete_if { |e| e.nil? || e == false }
+end
