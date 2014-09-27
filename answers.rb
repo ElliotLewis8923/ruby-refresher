@@ -60,3 +60,8 @@ def shortest_word_in_array(array)
 	array.first
 end
 
+def longest_word_in_array(array)
+	array.sort! { |x, y| y.length <=> x.length }
+	array.first
+end
+
