@@ -35,8 +35,8 @@ def array_sort_by_last_letter_of_word(array)
 end
 
 def get_first_half_of_string(string)
-	i = (string.length / 2.0).round
-	string[0..i-1]
+	i = string.length / 2.0
+	string[0..i.ceil-1]
 end
 
 def make_numbers_negative(number)
@@ -114,6 +114,10 @@ end
 
 def round_up_number(number)
 	number.ceil
+end
+
+def round_down_number(number)
+	number.floor
 end
 
 
