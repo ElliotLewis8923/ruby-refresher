@@ -7,7 +7,7 @@ def select_elements_starting_with_vowel(array)
 end
 
 def remove_nils_from_array(array)
-	array.delete_if { |e| e.nil? }
+	array.compact!
 end
 
 def remove_nils_and_false_from_array(array)
@@ -29,3 +29,8 @@ end
 def add_element_to_beginning_of_array(array, element)
 	array.unshift(element)
 end
+
+def array_sort_by_last_letter_of_word(array)
+	array.sort { |x, y| x[-1] <=> y[-1] }
+end
+
