@@ -107,4 +107,9 @@ def add_together_keys_and_values(hash)
 	array = hash.to_a.flatten!.inject(:+)
 end
 
+def remove_capital_letters_from_string(string)
+	new_array = []
+	string.gsub!(/[A-Z]/, "")
+end
+
 
