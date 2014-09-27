@@ -65,3 +65,6 @@ def longest_word_in_array(array)
 	array.first
 end
 
+def total_of_array(array)
+	array.inject(:+)
+end
