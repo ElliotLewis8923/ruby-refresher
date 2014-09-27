@@ -76,3 +76,7 @@ end
 def turn_symbol_into_string(symbol)
 	symbol.to_s
 end
+
+def average_of_array(array)
+	(array.inject(:+) / (array.length + 0.0) ).round
+end
