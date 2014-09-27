@@ -36,7 +36,6 @@ end
 
 def get_first_half_of_string(string)
 	i = (string.length / 2.0).round
-	puts i
 	string[0..i-1]
 end
 
@@ -51,4 +50,8 @@ def separate_array_into_even_and_odd_numbers(array)
 	new_array
 end
 
+def number_of_elements_that_are_palindromes(array)
+	return_arr = array.select { |e| e == e.reverse }
+	return_arr.length
+end
 
