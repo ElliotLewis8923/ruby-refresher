@@ -34,3 +34,8 @@ def array_sort_by_last_letter_of_word(array)
 	array.sort { |x, y| x[-1] <=> y[-1] }
 end
 
+def get_first_half_of_string(string)
+	i = (string.length / 2.0).round
+	puts i
+	string[0..i-1]
+end
