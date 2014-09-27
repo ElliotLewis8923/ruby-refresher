@@ -13,3 +13,7 @@ end
 def remove_nils_and_false_from_array(array)
 	array.delete_if { |e| e.nil? || e == false }
 end
+
+def reverse_every_element_in_array(array)
+	array.map { |e| e.reverse }
+end
