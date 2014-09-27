@@ -44,4 +44,11 @@ def make_numbers_negative(number)
 	number < 0 ? number : number = number * -1
 end
 
+def separate_array_into_even_and_odd_numbers(array)
+	new_array = []
+	new_array << array.select { |e| e.even? }
+	new_array << array.select { |e| e.odd? }
+	new_array
+end
+
 
