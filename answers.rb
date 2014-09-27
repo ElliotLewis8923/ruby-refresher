@@ -39,3 +39,9 @@ def get_first_half_of_string(string)
 	puts i
 	string[0..i-1]
 end
+
+def make_numbers_negative(number)
+	number < 0 ? number : number = number * -1
+end
+
+
