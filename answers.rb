@@ -95,6 +95,11 @@ def get_all_letters_in_array_of_words(array)
 	string = array.inject(:+)
 	string.each_char { |c| new_array << c }
 	new_array.sort!
-	
+end
+
+def swap_keys_and_values_in_a_hash(hash)
+	array = hash.map { |k, v| k = v, v = k }
+	hash = Hash[*array.flatten!]
+	hash
 end
 
