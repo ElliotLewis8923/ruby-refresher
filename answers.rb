@@ -70,7 +70,7 @@ def total_of_array(array)
 end
 
 def double_array(array)
-	array.concat( array )
+	array.concat(array)
 end
 
 def turn_symbol_into_string(symbol)
@@ -89,3 +89,12 @@ def convert_array_to_a_hash(array)
 	hash = Hash[*array]
 	hash
 end
+
+def get_all_letters_in_array_of_words(array)
+	new_array = []
+	string = array.inject(:+)
+	string.each_char { |c| new_array << c }
+	new_array.sort!
+	
+end
+
