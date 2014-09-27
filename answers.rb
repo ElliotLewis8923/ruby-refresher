@@ -104,7 +104,7 @@ def swap_keys_and_values_in_a_hash(hash)
 end
 
 def add_together_keys_and_values(hash)
-	array = hash.to_a
+	array = hash.to_a.flatten!.inject(:+)
 end
 
 
