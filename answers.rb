@@ -80,3 +80,7 @@ end
 def average_of_array(array)
 	(array.inject(:+) / (array.length + 0.0) ).round
 end
+
+def get_elements_until_greater_than_five(array)
+	array.take_while { |e| e <= 5 }
+end
