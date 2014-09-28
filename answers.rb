@@ -126,5 +126,10 @@ def format_date_nicely(time)
 	array.reverse!.join("/")
 end
 
+def get_domain_name_from_email_address(email)
+	email.gsub(/.+@([^.]+).+/, '\1')
+end
+
+
 
 
