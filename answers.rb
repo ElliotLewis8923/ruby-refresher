@@ -132,7 +132,7 @@ end
 
 def titleize_a_string(string)
 	array = string.split(' ')
-	array.map { |c| c.length > 3 || self[0].object_id == c.object_id ? c.capitalize : c }.join(' ') 
+	array.map { |c| c.length > 3 || array[0].object_id == c.object_id ? c.capitalize : c }.join(' ') 
 	# Definitely won't work in all cases, probably needs an array of words
 end
 
