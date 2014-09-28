@@ -130,6 +130,10 @@ def get_domain_name_from_email_address(email)
 	email.gsub(/.+@([^.]+).+/, '\1')
 end
 
+def titleize_a_string(string)
+	array = string.split(' ')
+	array.map { |c| c.length > 3 || array[0].object_id == c.object_id ? c.capitalize : c }.join(' ')
+end
 
 
 
