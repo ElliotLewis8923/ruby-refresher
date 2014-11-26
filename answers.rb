@@ -140,6 +140,9 @@ def square_root_of(number)
 	Math.sqrt(number)
 end
 
+def word_count_a_file(file)
+	File.foreach(file).inject(:+).split(' ').count
+end
 
 
 
