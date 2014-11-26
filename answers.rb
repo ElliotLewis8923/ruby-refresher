@@ -83,10 +83,7 @@ def convert_array_to_a_hash(array)
 end
 
 def get_all_letters_in_array_of_words(array)
-	array.inject(:+).each_char { |c| array.concat(c) }
-	# string = array.inject(:+)
-	# string.each_char { |c| new_array << c }
-	# new_array.sort!
+	array.join.chars.uniq.sort
 end
 
 def swap_keys_and_values_in_a_hash(hash)
@@ -130,6 +127,8 @@ end
 def check_a_string_for_special_characters(string)
 	/\W/ === string
 end
+
+
 
 
 
