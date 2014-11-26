@@ -136,6 +136,10 @@ def is_a_3_dot_range?(range)
 	range.to_s.scan(/\W/).count == 3
 end
 
+def square_root_of(number)
+	Math.sqrt(number)
+end
+
 
 
 
