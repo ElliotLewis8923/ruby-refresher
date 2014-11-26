@@ -128,6 +128,10 @@ def check_a_string_for_special_characters(string)
 	/\W/ === string
 end
 
+def get_upper_limit_of(range)
+	range.last
+end
+
 
 
 
