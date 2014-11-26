@@ -179,13 +179,12 @@ describe 'the Friday test :)' do
     expect(n).to eq 20
   end
 
-#   specify 'is_a_3_dot_range?' do
-#     a = is_a_3_dot_range? 1..20
-#     b = is_a_3_dot_range? 1...20
-
-#     expect(a).to be_false
-#     expect(b).to be_true
-#   end
+  fit 'is_a_3_dot_range?' do
+    a = is_a_3_dot_range? 1..20
+    b = is_a_3_dot_range? 1...20
+    expect(a).to eq false
+    expect(b).to eq true
+   end
 
 #   specify 'square_root_of' do
 #     a = square_root_of 9

@@ -132,6 +132,11 @@ def get_upper_limit_of(range)
 	range.last
 end
 
+def is_a_3_dot_range?(range)
+	range.to_s.scan(/\W/).count == 3
+end
+
+
 
 
 
