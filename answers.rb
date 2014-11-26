@@ -144,6 +144,10 @@ def word_count_a_file(file)
 	File.foreach(file).inject(:+).split(' ').count
 end
 
+def call_method_from_string(method)
+	method.call
+end
+
 
 
 
