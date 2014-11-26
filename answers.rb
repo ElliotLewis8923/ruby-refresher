@@ -148,6 +148,10 @@ def call_method_from_string(method)
 	method.call
 end
 
+def is_a_2014_bank_holiday?(time)
+	bank_holidays = [Time.new(2014,8,25),Time.new(2014,5,26),Time.new(2014,5,5),Time.new(2014,4,21),Time.new(2014,4,18),Time.new(2014,1,1)].include?(time)
+end
+
 
 
 
