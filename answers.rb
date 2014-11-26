@@ -149,7 +149,13 @@ def call_method_from_string(method)
 end
 
 def is_a_2014_bank_holiday?(time)
-	bank_holidays = [Time.new(2014,8,25),Time.new(2014,5,26),Time.new(2014,5,5),Time.new(2014,4,21),Time.new(2014,4,18),Time.new(2014,1,1)].include?(time)
+	['2014/08/25','2014/05/26','2014/05/05','2014/04/21','2014/04/18','2014/01/01'].include?(time.strftime('%Y/%m/%d'))
+end
+
+def your_birthday_is_on_a_friday_in_the_year(time)
+	return time.strftime('%Y').to_i if time.friday?
+	time += 31536000
+	your_birthday_is_on_a_friday_in_the_year(time)
 end
 
 
