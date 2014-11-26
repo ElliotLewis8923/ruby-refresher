@@ -7,7 +7,7 @@ def select_elements_starting_with_vowel(array)
 end
 
 def remove_nils_from_array(array)
-	array.compact!
+	array.compact
 end
 
 def remove_nils_and_false_from_array(array)
@@ -15,7 +15,7 @@ def remove_nils_and_false_from_array(array)
 end
 
 def reverse_every_element_in_array(array)
-	array.map { |e| e.reverse }
+	array.map(&:reverse)
 end
 
 def every_possible_pairing_of_students(array)
@@ -31,12 +31,11 @@ def add_element_to_beginning_of_array(array, element)
 end
 
 def array_sort_by_last_letter_of_word(array)
-	array.sort { |x, y| x[-1] <=> y[-1] }
+	array.sort_by { |e| e[-1] }
 end
 
 def get_first_half_of_string(string)
-	i = string.length / 2.0
-	string[0..i.ceil-1]
+	string[0...(string.length / 2.0).ceil]
 end
 
 def make_numbers_negative(number)
@@ -44,25 +43,19 @@ def make_numbers_negative(number)
 end
 
 def separate_array_into_even_and_odd_numbers(array)
-	new_array = []
-	new_array << array.select { |e| e.even? }
-	new_array << array.select { |e| e.odd? }
-	new_array
+	array = ([array.select { |e| e.even? }]).concat([array.select { |e| e.odd? }])
 end
 
 def number_of_elements_that_are_palindromes(array)
-	return_arr = array.select { |e| e == e.reverse }
-	return_arr.length
+	array.select { |e| e == e.reverse }.length
 end
 
 def shortest_word_in_array(array)
-	array.sort! { |x, y| x.length <=> y.length }
-	array.first
+	array.min_by(&:length)
 end
 
 def longest_word_in_array(array)
-	array.sort! { |x, y| y.length <=> x.length }
-	array.first
+	array.max_by(&:length)
 end
 
 def total_of_array(array)
@@ -78,7 +71,7 @@ def turn_symbol_into_string(symbol)
 end
 
 def average_of_array(array)
-	(array.inject(:+) / (array.length + 0.0) ).round
+	(array.inject(:+) / (array.length.to_f) ).round
 end
 
 def get_elements_until_greater_than_five(array)
@@ -87,20 +80,18 @@ end
 
 def convert_array_to_a_hash(array)
 	hash = Hash[*array]
-	hash
 end
 
 def get_all_letters_in_array_of_words(array)
-	new_array = []
-	string = array.inject(:+)
-	string.each_char { |c| new_array << c }
-	new_array.sort!
+	array.inject(:+).each_char { |c| array.concat(c) }
+	# string = array.inject(:+)
+	# string.each_char { |c| new_array << c }
+	# new_array.sort!
 end
 
 def swap_keys_and_values_in_a_hash(hash)
-	array = hash.map { |k, v| k = v, v = k }
-	hash = Hash[*array.flatten!]
-	hash
+	array = hash.map { |k, v| k = v, v = k }.flatten
+	hash = Hash[*array]
 end
 
 def add_together_keys_and_values(hash)
@@ -134,6 +125,10 @@ def titleize_a_string(string)
 	array = string.split(' ')
 	array.map { |c| c.length > 3 || array[0].object_id == c.object_id ? c.capitalize : c }.join(' ') 
 	# Definitely won't work in all cases, probably needs an array of words
+end
+
+def check_a_string_for_special_characters(string)
+	/\W/ === string
 end
 
 
